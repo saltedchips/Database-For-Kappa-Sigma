@@ -1,0 +1,1 @@
+Attempting to use postgres for the database but due to issues finding a suitable program to visualize it we might have to switch to mySQL.
