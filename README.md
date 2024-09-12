@@ -20,3 +20,7 @@ npm start
 
 This runs "nodemon index.js" in the terminal which opens the database on the port listed in the "app.listen(<port>)" code. 
 Currently this iteration is quite buggy and dosent like giving access or starting the server so more needs to be done to make it more viable.
+
+*** IN ORDER TO PUSH COMMITS ***
+
+This does not work like git-classes you need to use the SSH link to push the code.
