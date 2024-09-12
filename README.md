@@ -9,8 +9,8 @@ sudo apt install postgres-15
 
 After running the server make sure you kill it if you want to open it again with:
 
-sudo pkill -u postgres
-
+sudo lsof -i :3001 (find the PID of the process running)
+kill -9 <PID>
 
 *** RUNNING THE DATABASE ***
 

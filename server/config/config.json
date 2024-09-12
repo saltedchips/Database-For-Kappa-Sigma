@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "password",
-    "database": "postgres",
+    "username": "admin",
+    "password": "betachi01",
+    "database": "KappaSigma",
     "host": "localhost",
     "dialect": "postgres"
   },
