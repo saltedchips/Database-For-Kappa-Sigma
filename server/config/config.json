@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "admin",
-    "password": "betachi01",
+    "password": "Password",
     "database": "KappaSigma",
     "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
     "username": "admin",
-    "password": "betachi01",
+    "password": "Password",
     "database": "KappaSigma",
     "host": "localhost",
     "dialect": "postgres"
   },
   "production": {
     "username": "admin",
-    "password": "betachi01",
+    "password": "Password",
     "database": "KappaSigma",
     "host": "localhost",
     "dialect": "postgres"
