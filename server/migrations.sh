@@ -1,0 +1,11 @@
+npx sequelize-cli model:generate --name member --attributes student_id:INTEGER,fname:STRING,lname:STRING,service_hrs:INTEGER,GPA:DECIMAL,phone_num:STRING,street:STRING,city:STRING,state:STRING,zip:STRING,ec_name:STRING
+npx sequelize-cli model:generate --name emergency_contact --attributes name:STRING,relationship:STRING,phone_num:STRING
+npx sequelize-cli model:generate --name majors --attributes student_id:INTEGER,major:STRING
+npx sequelize-cli model:generate --name active_member --attributes student_id:INTEGER,initiation_semester:STRING
+npx sequelize-cli model:generate --name pledge --attributes student_id:INTEGER,pledging_semester:STRING
+npx sequelize-cli model:generate --name is_taking --attributes student_id:INTEGER,class_name:STRING
+npx sequelize-cli model:generate --name classes --attributes name:STRING,section:STRING,teacher:STRING
+npx sequelize-cli model:generate --name committee --attributes student_id:INTEGER,name:STRING,budget:INTEGER,exec_name:STRING
+npx sequelize-cli model:generate --name is_on_com --attributes student_id:INTEGER,com_name:STRING
+npx sequelize-cli model:generate --name is_on_exec --attributes student_id:INTEGER,is_assistant:BOOLEAN
+npx sequelize-cli model:generate --name exec_position --attributes exec_name:STRING
