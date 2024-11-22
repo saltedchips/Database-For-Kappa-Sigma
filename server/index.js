@@ -11,9 +11,12 @@ db.sequelize.authenticate()
 
 const app = express()
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '../client/public/index.html'));
+  });
 
-app.use("/members", require("./routes/members"))
+  app.use("/home", require("./routes/members"))
+
 
 const PORT = process.env.port || 3001
 
