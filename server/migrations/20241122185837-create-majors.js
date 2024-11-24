@@ -13,7 +13,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       major: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+        primaryKey: true
       },
       createdAt: {
         allowNull: false,

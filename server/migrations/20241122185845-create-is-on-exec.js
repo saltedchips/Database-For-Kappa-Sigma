@@ -13,7 +13,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       is_assistant: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+      },
+      exec_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        primaryKey: true
       },
       createdAt: {
         allowNull: false,

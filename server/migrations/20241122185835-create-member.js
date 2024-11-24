@@ -10,34 +10,44 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       student_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        primaryKey: true
       },
       fname: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       lname: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       service_hrs: {
         type: Sequelize.INTEGER
       },
       GPA: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL,
+        allowNull: false
       },
       phone_num: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       street: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       city: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       state: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       zip: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       ec_name: {
         type: Sequelize.STRING
