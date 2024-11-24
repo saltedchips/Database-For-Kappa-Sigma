@@ -15,9 +15,23 @@
         height: 100vh;
         margin: 0;
       }
-      h2 {
+      section {
         text-align: center;
+        top: 10px;
+        width: 100%;
+      }
+      h1 {
         margin-bottom: 20px;
+        font-family: serif;
+        font-size: 40px;
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-family: serif;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 30px;
       }
       label {
         display: block;
@@ -45,24 +59,129 @@
       button:hover {
         background-color: #0056b3;
       }
+      #back {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 55px;
+        height: 30px;
+      }
+      #home_image {
+        margin: 0 auto;
+        width: 500px;
+        display: block;
+        position: absolute;
+        top: 50px;
+        transform: translateX(-10%);
+      }
+      #login_image {
+        margin: auto;
+        width: 500px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        transform: translateX(-23%);
+      }
     </style>
   </head>
   <body>
     <div id="login" style="display: block;">
-      <h2>LOG IN</h2>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required>
+      <section>
+        <img id="login_image" src="loginImage.png" alt="Logo">
+      
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
             
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
             
-      <button onclick="showScreen('home')">LOG IN</button> 
+        <button onclick="showScreen('home')">LOG IN</button>
+      </section>
     </div>
 
     <div id="home" style="display: none;">
-      <img src="homeImage.png" alt="Logo">
+        <img id="home_image" src="homeImage.png" alt="Logo">
+        <button onclick="showScreen('EC')">Executive Committee</button>
+        <button onclick="showScreen('committee')">Committees</button>
+        <button onclick="showScreen('members')">Members</button>
+    </div>  
+
+    <div id="EC" style="display: none;">
+      <section>
+        <h1>Executive Committee</h1>
+        <h2>Grand Master</h2>
+
+        <h2>Grand Procurator</h2>
+
+        <h2>Grand Master of Ceremonies</h2>
+
+        <h2>Grand Treasurer</h2>
+
+        <h2>Grand Scribe</h2>
+
+        <h2>Inner Guard</h2>
+
+        <h2>Outer Guard</h2>
+      </section>
+
+      <button id="back" onclick="showScreen('home')">Back</button>
     </div>
 
-    <script src="functions.js" defer></script> <!-- Reference to external JavaScript -->
+    <div id="committee" style="display: none;">
+      <section>
+        <h1>Committees</h1>
+        <button onclick="showScreen('committeeName')">Committee Name</button>
+      </section>
+
+      <button id="back" onclick="showScreen('home')">Back</button>
+    </div>
+
+    <div id="members" style="display: none;">
+      <section>
+        <h1>Members</h1>
+        <button onclick="showScreen('addMember')">Add Member</button>
+      </section>
+
+      <button id="back" onclick="showScreen('home')">Back</button>
+    </div>
+    
+    <div id="committeeName" style="display: none;">
+      <section>
+        <h1>Committee Name</h1>
+        <p>
+          Budget: <!--get budget-->
+          <br>
+        </p>
+      </section>
+
+      <button id="back" onclick="showScreen('committee')">Back</button>
+    </div>
+
+    <div id="addMember" style="display: none;">
+      <section>
+        <h1>Add Member</h1>
+        <h3>First Name:</h3>
+        <h3>Last Name:</h3>
+        <h3>Student ID:</h3>
+        <h3>Phone no.:</h3>
+        <h3>Street:</h3>
+        <h3>City:</h3>
+        <h3>State:</h3>
+        <h3>ZIP:</h3>
+        <button onclick="//">SUBMIT</button>
+      </section>
+
+      <button id="back" onclick="showScreen('members')">Back</button>
+    </div>
+
+    <div id="memberName" style="display: none;">
+      <section>
+        <h1>Member Name</h1>
+      </section>
+
+      <button id="back" onclick="showScreen('home')">Back</button>
+    </div>
+
+    <script src="functions.js" defer></script>
   </body>
 </html>
