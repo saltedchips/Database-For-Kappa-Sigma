@@ -1,2 +1,2 @@
 CREATE USER admin WITH SUPERUSER PASSWORD 'Password';
-CREATE DATABASE KappaSigma OWNER = admin;
+CREATE DATABASE kappasigma OWNER = admin;
