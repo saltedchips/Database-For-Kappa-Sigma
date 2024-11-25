@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "seed": "npx sequelize-cli db:seed:all",
+    "seeder": "npx sequelize-cli seed:generate --name demo-user",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
