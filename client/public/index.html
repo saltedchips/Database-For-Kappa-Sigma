@@ -149,8 +149,9 @@
       <section>
         <h1>Committee Name</h1>
         <p>
-          Budget: <!--get budget-->
+          Budget: <span id="committeeBudget">0</span>
           <br>
+
         </p>
       </section>
 
@@ -160,15 +161,23 @@
     <div id="addMember" style="display: none;">
       <section>
         <h1>Add Member</h1>
-        <h3>First Name:</h3>
-        <h3>Last Name:</h3>
-        <h3>Student ID:</h3>
-        <h3>Phone no.:</h3>
-        <h3>Street:</h3>
-        <h3>City:</h3>
-        <h3>State:</h3>
-        <h3>ZIP:</h3>
-        <button onclick="//">SUBMIT</button>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" required>
+        <label for="phoneNo">Phone Number:</label>
+        <input type="text" id="phoneNo" required>
+        <label for="street">Street:</label>
+        <input type="text" id="street" required>
+        <label for="city">City:</label>
+        <input type="text" id="city" required>
+        <label for="state">State:</label>
+        <input type="text" id="state" required>
+        <label for="zip">ZIP:</label>
+        <input type="text" id="zip" required>
+        <button onclick="addMember()">SUBMIT</button>
       </section>
 
       <button id="back" onclick="showScreen('members')">Back</button>
