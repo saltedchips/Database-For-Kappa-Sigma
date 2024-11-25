@@ -3,34 +3,27 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class classes extends Model {
+  class exec_positions extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of DataTypes lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      classes.hasMany(models.is_takings, {
-        foreignKey: 'class_name', 
+      exec_positions.hasOne(models.is_on_execs, {
+        foreignKey: 'exec_name', 
       });
     }
   }
-  classes.init({
-    name: {
+  exec_positions.init({
+    exec_name: {
       type: DataTypes.STRING,
       allowNull: false,
       primaryKey: true
     },
-    section: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    teacher: {
-      type: DataTypes.STRING
-    },
   }, {
     sequelize,
-    modelName: 'classes',
+    modelName: 'exec_positions',
   });
-  return classes;
+  return exec_positions;
 };

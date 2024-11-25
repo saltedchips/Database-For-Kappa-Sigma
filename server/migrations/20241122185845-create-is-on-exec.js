@@ -10,10 +10,21 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       student_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'members',
+          key: 'student_id'
+        }
       },
       is_assistant: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+      },
+      exec_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        primaryKey: true
       },
       createdAt: {
         allowNull: false,

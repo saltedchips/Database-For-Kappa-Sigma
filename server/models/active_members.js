@@ -3,14 +3,14 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class majors extends Model {
+  class active_members extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of DataTypes lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      majors.belongsTo(models.members, {
+      active_members.belongsTo(models.members, {
         foreignKey: {
           name: 'student_id', 
           type: DataTypes.INTEGER,  
@@ -20,15 +20,14 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
   }
-  majors.init({
-  major: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    primaryKey: true
-  },
+  active_members.init({
+    initiation_semester: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     sequelize,
-    modelName: 'majors',
+    modelName: 'active_members',
   });
-  return majors;
+  return active_members;
 };

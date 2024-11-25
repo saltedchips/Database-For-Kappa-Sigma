@@ -2,21 +2,21 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('emergency_contacts', {
+    await queryInterface.createTable('exec_positions', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      exec_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        primaryKey: true
       },
-      relationship: {
-        type: Sequelize.STRING
-      },
-      phone_num: {
-        type: Sequelize.STRING
+      is_assistant: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
@@ -29,6 +29,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('emergency_contacts');
+    await queryInterface.dropTable('exec_positions');
   }
 };

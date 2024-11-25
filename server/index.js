@@ -26,9 +26,9 @@ const PORT = process.env.port || 3001
 
 
 
-db.sequelize.sync().then(() => {
+db.sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => {
-        console.log("Server Running on Port " + PORT)
+        console.log("*********** ALL FILES SYNCED AND SERVER RUNNING ON PORT " + PORT + " ***********")
     });
 })
 
