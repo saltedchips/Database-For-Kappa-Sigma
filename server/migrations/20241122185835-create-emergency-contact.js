@@ -14,9 +14,6 @@ module.exports = {
         allowNull: false,
         primaryKey: true
       },
-      relationship: {
-        type: Sequelize.STRING
-      },
       phone_num: {
         type: Sequelize.STRING,
         allowNull: false

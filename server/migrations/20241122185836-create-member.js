@@ -50,7 +50,12 @@ module.exports = {
         allowNull: false
       },
       ec_name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+        references: {
+          model: "emergency_contacts",
+          key: "name",
+        }
       },
       createdAt: {
         allowNull: false,
@@ -59,7 +64,7 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
     });
   },
   async down(queryInterface, Sequelize) {
