@@ -6,11 +6,23 @@ const db = require('../models')
 router.get('/', (req,res) => 
     db.member.findAll()
     .then(members => {
+        
         console.log(members)
         res.sendStatus(200)
     })
     .catch(err => console.log(err))
     )
+
+router.post('/delete', async (req, res) => {
+    try{
+        const user = await userService.deleteUser();
+        res.send(user);
+    }catch(err){
+        return next(err);
+    }
+}
+
+)
 
 
 
