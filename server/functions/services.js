@@ -34,7 +34,7 @@ class Services {
     async getAllUsersAttributes(){
         try {
             const users = await this.models.members.findAll({
-                attrubites: {exclute: ['service_hrs']}
+                attributes: {exclude: ['service_hrs']}
             })
             return users;
         }catch(err){
@@ -45,8 +45,8 @@ class Services {
 
     async findOneUser(){
         try{
-            const users = await this.models.members.findOne({where: {student_id: document.getElementById('studentId').value }});
-            return user;
+            const users = await this.models.members.findOne({where: {student_id}});
+            return users;
         }catch(err) {
             return err;
         }
@@ -56,7 +56,7 @@ class Services {
     async getAllUsers(){
         try{
             const users = await this.models.members.findAll();
-            return user;
+            return users;
         }catch(err) {
             return err;
         }
@@ -65,17 +65,17 @@ class Services {
 
     async getAllUsersWhere(){
         try{
-            const users = await this.models.members.findAll({where: {/*IDK*/}})
-            return user;
+            const users = await this.models.members.findAll({where: {criteria}})
+            return users;
         }catch(err) {
             return err;
         }
     }
 
-    async findOneUser(){
+    async destroyUser(student_id){
         try{
-            const users = await this.models.members.destroy({where: {student_id: document.getElementById('studentId').value }})
-            return user;
+            const users = await this.models.members.destroy({where: {student_id}})
+            return users;
         }catch(err) {
             return err;
         }

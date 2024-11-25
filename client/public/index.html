@@ -49,6 +49,7 @@
       button {
         width: 100%;
         padding: 10px;
+        margin-bottom: 20px;
         background-color: #007bff;
         color: white;
         border: none;
@@ -139,6 +140,7 @@
     <div id="members" style="display: none;">
       <section>
         <h1>Members</h1>
+
         <button onclick="showScreen('addMember')">Add Member</button>
       </section>
 
@@ -161,23 +163,25 @@
     <div id="addMember" style="display: none;">
       <section>
         <h1>Add Member</h1>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" required>
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" required>
-        <label for="studentId">Student ID:</label>
-        <input type="text" id="studentId" required>
-        <label for="phoneNo">Phone Number:</label>
-        <input type="text" id="phoneNo" required>
-        <label for="street">Street:</label>
-        <input type="text" id="street" required>
-        <label for="city">City:</label>
-        <input type="text" id="city" required>
-        <label for="state">State:</label>
-        <input type="text" id="state" required>
-        <label for="zip">ZIP:</label>
-        <input type="text" id="zip" required>
-        <button onclick="addMember()">SUBMIT</button>
+        <form id="addMemberForm" method="POST" action="/addMember">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" required>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" required>
+          <label for="studentId">Student ID:</label>
+          <input type="text" id="studentId" required>
+          <label for="phoneNo">Phone Number:</label>
+          <input type="text" id="phoneNo" required>
+          <label for="street">Street:</label>
+          <input type="text" id="street" required>
+          <label for="city">City:</label>
+          <input type="text" id="city" required>
+          <label for="state">State:</label>
+          <input type="text" id="state" required>
+          <label for="zip">ZIP:</label>
+          <input type="text" id="zip" required>
+          <button onclick="addMember()">SUBMIT</button>
+        </form>
       </section>
 
       <button id="back" onclick="showScreen('members')">Back</button>
